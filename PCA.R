@@ -3,6 +3,7 @@ setwd("/media/matthieu/Data/Matthieu/##Etude/#M1/S2/DataScience/Fashion-MNIST")
 library("FactoMineR")
 library("corrplot")
 library("factoextra")
+library("fields")
 
 # load image files
 load_image_file = function(filename) {
@@ -40,14 +41,44 @@ test_xy = cbind(test_x, test_y)
 
 label_col = 785
 
-resPCA <- PCA(train_xy, quali.sup = label_col, scale.unit = FALSE)
-resPCA <- PCA(test_xy, quali.sup = label_col, scale.unit = FALSE)
+# Compute PCA
+resPCA <- PCA(train_xy, quali.sup = label_col, scale.unit = FALSE, ncp = 50)
+resPCA <- PCA(test_xy, quali.sup = label_col, scale.unit = FALSE, ncp = 50)
 
 layout(matrix(c(1,2), ncol=2))
 plot.PCA(resPCA, choix = "ind", habillage = label_col, label = NULL)
 
-var <- get_pca_var(resPCA)
-corrplot(var$cos2)
-corrplot(var$contrib, is.corr=FALSE)
+#var <- get_pca_var(resPCA)
+#corrplot(var$cos2)
+#corrplot(var$contrib, is.corr=FALSE)
 
 fviz_pca_ind(resPCA, col.ind = train_xy[,label_col], label = "none", addEllipses = TRUE)
+
+# Images reconstruction
+rec <- reconst(resPCA)
+
+# Select one obs for each class
+index <- c(2, 17, 6, 4, 20, 9, 19, 7, 24, 1)
+rec <- rec[index,]
+
+normalize <- function(x){
+  (x - min(x)) / (max(x) - min(x)) * 255
+}
+
+rec <- apply(rec, MARGIN = 1, FUN = normalize)
+
+colors <- gray.colors(255)
+
+for(i in 1:length(index)){
+  layout(matrix(c(1:2), ncol=2))
+  temp <- matrix(rec[,i], nrow = 28, byrow = TRUE)
+  image(temp, col = colors)
+  temp <- matrix(as.double(train_x[index[i],]), nrow = 28, byrow = TRUE)
+  image(temp, col = colors) 
+  readline(prompt="Press [enter] to continue")
+}
+
+temp <- matrix(rec[,1], nrow = 28, byrow = TRUE)
+image.plot(temp, col = colors)
+temp <- matrix(as.double(train_x[index[1],]), nrow = 28, byrow = TRUE)
+image.plot(temp, col = colors) 
