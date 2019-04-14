@@ -1,0 +1,50 @@
+[I 10:46:47.137 NotebookApp] Serving notebooks from local directory: /home/lucarp/master/data_science
+[I 10:46:47.137 NotebookApp] The Jupyter Notebook is running at:
+[I 10:46:47.137 NotebookApp] http://localhost:8888/?token=b5a3868513fa021e6675c654841937a66ac1b8f83b24ab52
+[I 10:46:47.137 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:46:47.141 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///run/user/1000/jupyter/nbserver-10184-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=b5a3868513fa021e6675c654841937a66ac1b8f83b24ab52
+[W 10:47:07.050 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414104646 (127.0.0.1) 5.75ms referer=http://localhost:8888/notebooks/Rapport.ipynb
+[I 10:47:07.346 NotebookApp] Kernel started: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 10:47:07.790 NotebookApp] Adapting to protocol v5.1 for kernel da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 10:49:08.306 NotebookApp] Saving file at /Rapport.ipynb
+[W 10:58:40.079 NotebookApp] 404 GET /api/kernels/107eb034-7ac4-4899-aa8a-857a3d7c5e3f/channels?session_id=53df8407a7004dd18c21d3db2e79691c (127.0.0.1): Kernel does not exist: 107eb034-7ac4-4899-aa8a-857a3d7c5e3f
+[W 10:58:40.080 NotebookApp] 404 GET /api/kernels/107eb034-7ac4-4899-aa8a-857a3d7c5e3f/channels?session_id=53df8407a7004dd18c21d3db2e79691c (127.0.0.1) 2.76ms referer=None
+[W 10:58:41.744 NotebookApp] Replacing stale connection: 107eb034-7ac4-4899-aa8a-857a3d7c5e3f:53df8407a7004dd18c21d3db2e79691c
+[W 10:58:54.115 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414104646 (127.0.0.1) 1.24ms referer=http://localhost:8888/notebooks/Rapport.ipynb
+[I 10:58:54.657 NotebookApp] Adapting to protocol v5.1 for kernel da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 10:59:55.722 NotebookApp] Saving file at /Rapport.ipynb
+[I 14:21:07.606 NotebookApp] Saving file at /Rapport.ipynb
+[I 14:27:07.697 NotebookApp] Saving file at /Rapport.ipynb
+[I 14:31:07.621 NotebookApp] Saving file at /Rapport.ipynb
+[I 14:33:07.622 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:03:07.725 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:03:41.763 NotebookApp] Kernel interrupted: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:03:53.632 NotebookApp] Kernel interrupted: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:03:55.285 NotebookApp] Kernel interrupted: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:04:04.457 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:11:57.163 NotebookApp] Starting buffering for da06a92f-d55f-4848-a3d9-5c04b91460a5:099708d329154ca1921d26361e5b0812
+[W 15:11:57.689 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414104646 (127.0.0.1) 1.36ms referer=http://localhost:8888/notebooks/Rapport.ipynb
+[I 15:11:58.357 NotebookApp] Adapting to protocol v5.1 for kernel da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:12:25.961 NotebookApp] Starting buffering for da06a92f-d55f-4848-a3d9-5c04b91460a5:dd1af500f9ed406d89be2e04104e3269
+[W 15:12:26.404 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414104646 (127.0.0.1) 1.56ms referer=http://localhost:8888/notebooks/Rapport.ipynb
+[I 15:12:27.010 NotebookApp] Adapting to protocol v5.1 for kernel da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:12:46.831 NotebookApp] Kernel interrupted: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:12:48.384 NotebookApp] Kernel interrupted: da06a92f-d55f-4848-a3d9-5c04b91460a5
+[I 15:14:28.638 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:16:26.873 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:52:26.902 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:53:41.633 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:54:26.902 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:55:34.495 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:56:26.901 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:58:26.903 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:58:44.711 NotebookApp] Saving file at /Rapport.ipynb
+[I 15:58:45.229 NotebookApp] Saving file at /Rapport.ipynb
+[I 16:00:30.303 NotebookApp] Saving file at /Rapport.ipynb
+[I 16:02:26.908 NotebookApp] Saving file at /Rapport.ipynb
+[I 16:03:06.389 NotebookApp] Saving file at /Rapport.ipynb
