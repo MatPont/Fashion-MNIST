@@ -3,9 +3,10 @@ from sklearn.manifold import TSNE
 from mnist_reader import load_mnist
 
 X_train, y_train = load_mnist('dataset', kind='train')
+X_test, y_test = load_mnist('dataset', kind='t10k')
 
 embedding, kl, n_iter = TSNE(perplexity = float(sys.argv[1]),
 							early_exaggeration = float(sys.argv[2]),
-							learning_rate = float(sys.argv[3]), verbose = 10).fit_transform(X_train)
+							learning_rate = float(sys.argv[3]), verbose = 2).fit_transform(X_test)
 
 print(kl)

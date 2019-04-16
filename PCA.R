@@ -29,12 +29,12 @@ load_label_file = function(filename) {
 }
 
 # load images
-train_x = load_image_file("Dataset/train-images-idx3-ubyte")
-test_x  = load_image_file("Dataset/t10k-images-idx3-ubyte")
+train_x = load_image_file("dataset/train-images-idx3-ubyte")
+test_x  = load_image_file("dataset/t10k-images-idx3-ubyte")
 
 # load labels
-train_y = as.factor(load_label_file("Dataset/train-labels-idx1-ubyte"))
-test_y = as.factor(load_label_file("Dataset/t10k-labels-idx1-ubyte"))
+train_y = as.factor(load_label_file("dataset/train-labels-idx1-ubyte"))
+test_y = as.factor(load_label_file("dataset/t10k-labels-idx1-ubyte"))
 
 train_xy = cbind(train_x, train_y)
 test_xy = cbind(test_x, test_y)
