@@ -47,10 +47,13 @@ for(i in c(1:10)){
   name <- paste("tsne_", perpl, ".png", sep = "")
   colors = rainbow(length(unique(train_y)))
   names(colors) = unique(train_y)
+  kl <- round(tsne$itercosts[length(tsne$itercosts)], digits = 2)
+  plot_name <- paste("t-SNE with KL-divergence = ", kl, sep ="")
   png(filename=name, width = 1000, height = 1000)
-  plot(tsne$Y, xlab = "Comp. 1", ylab = "Comp. 2", col = colors[train_y])
+  plot(tsne$Y, xlab = "Comp. 1", ylab = "Comp. 2", col = colors[train_y], main = plot_name)
   dev.off()
   
   # Increase perplexity
   perpl <- perpl +5
 }
+
