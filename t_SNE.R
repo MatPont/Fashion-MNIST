@@ -41,7 +41,7 @@ label_col = 785
 perpl <- 5
 for(i in c(1:10)){
   # Run tSNE
-  tsne <- Rtsne(train_x, perplexity = perpl, eta = 200.0) 
+  tsne <- Rtsne(train_x, perplexity = perpl, eta = 200.0, verbose = TRUE) 
   
   # Plot
   name <- paste("tsne_", perpl, ".png", sep = "")

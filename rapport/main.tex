@@ -25,7 +25,7 @@ Nous devons analyser ce jeu de données à l'aide des différents algorithmes su
 \item t-distributed Stochastic Neighbor Embedding (t-SNE)
 \item Autoencoder
 \item K-Means
-\item Support Vector Machines (SVM)
+\item Support Vector Machine (SVM)
 \item Linear Discriminant Analysis (LDA)
 \end{itemize}
 
@@ -33,20 +33,20 @@ Nous devons analyser ce jeu de données à l'aide des différents algorithmes su
 
 Nous avons commencé par l'analyse en composantes principales (en utilisant R et le package \textit{FactoMineR}) dont les deux premières composantes n'expliquent que 46.8\% de la variance totale des données. La troisième composante (non représentée sur les différentes figures) n'apporte que 6\% d'inertie.
 
-Etant donné que chaque variable sont dans un intervalle identique nous avons décidé de faire une ACP non normée, avec une ACP normée nous n'avons que 36.49\% d'inertie.
+Etant donné que toutes les variables sont dans un intervalle identique nous avons décidé de faire une ACP non normée, avec une ACP normée nous n'avons que 36.49\% d'inertie pour les deux premières composantes.
 
-On voit sur le plan factoriel des variables (figure \ref{fig:pca_var})
+Le plan factoriel des variables (figure \ref{fig:pca_var}) est assez complexe à analyser étant donné le nombre de dimensions de départ. Ce que l'on peut tout de même voir c'est qu'aucune des dimensions d'origine ne sont corrélées négativement avec les deux principales composantes du PCA à la fois.
 
 \begin{figure}[H] 
 \centering
-\includegraphics[width=300]{pca_var_factor_map.png}
+\includegraphics[width=300px]{pca_var_factor_map.png}
 \caption{Plan factoriel des variables avec PCA.}
 \label{fig:pca_var}
 \end{figure}
 
 \begin{figure}[H] 
 \centering
-\includegraphics[width=300]{pca_ind_factor_map.png}
+\includegraphics[width=300px]{pca_ind_factor_map.png}
 \caption{Plan factoriel des individus avec PCA.}
 \label{fig:pca_ind}
 \end{figure}
@@ -55,10 +55,10 @@ On voit sur le plan factoriel des variables (figure \ref{fig:pca_var})
 \centering
 \includegraphics[width=\textwidth]{pca_ellipses.png}
 \caption{Ellipse des classes avec PCA.}
-\label{fig:pca_ellipse}
+\label{fig:pca_ellipse_classe}
 \end{figure}
 
-On remarque sur la figure \ref{fig:pca_ellipse} que les clusters se confondent et semblent n'être pas sufisamment séparés sur les deux composantes principales du PCA. Cela fait sens avec le pourcentage de la variance expliquée par ces deux composantes (46.8\%).
+On remarque sur la figure \ref{fig:pca_ellipse_classe} que les clusters se confondent et semblent n'être pas sufisamment séparés sur les deux composantes principales du PCA. Cela fait sens avec le pourcentage de la variance expliquée par ces deux composantes (46.8\%).
 
 Sur les figures suivantes nous voyons à gauche l'image reconstruite et à droite l'image originale pour chaque classe. Nous avons choisi les 50 premières composantes qui expliquent 86.27\% de la variance totale. Le choix du nombre de 50 s'est fait en affichant la variance totale expliquée pour chaque composante, c'est environ à ce chiffre que la variance augmente très lentement.
 
@@ -94,18 +94,24 @@ Sur les figures suivantes nous voyons à gauche l'image reconstruite et à droit
 
 \section{t-distributed Stochastic Neighbor Embedding (t-SNE)}
 
-Après avoir étudier la documentation de la fonction TSNE de la librairie \textit{sklearn} pour python nous observons 3 principaux hyper-paramètres: \textit{perplexity}, \textit{early exaggeration} et \textit{learning rate}. 
+Après avoir étudié la documentation de la fonction \textit{Rtsne} de la librairie \textit{Rtsne} pour R nous observons 2 principaux hyper-paramètres à ajuster: \textit{perplexity} et \textit{learning rate}. 
 
 La méthode nous donne en sortie la valeur de la divergence de Kullback-Leibler qui est une mesure de dissimilarité entre deux distributions, nous devons donc chercher les hyper-paramètres minimisant cette valeur le plus possible.
+
+Selon [L. van der Maaten et al. 2009] le paramètre \textit{perplexity} doit varier entre 5 et 50.  
+
+Dans un premier temps nous avons donc fait tourner l'algorithme pour des valeurs de 5 à 50 en augmentant de 5 à chaque fois et en gardant le \textit{learning rate} par défaut, à savoir 200. La valeur de la divergence de Kullback-Lieber ne faisait que diminuer au fur et à mesure que la \textit{perplexity} augmentait. Nous avons refait cette expérience mais cette fois pour des valeurs de 55 à 100 et le même résultat s'est produit.
 
 \section{Autoencoder}
 
 \section{K-Means}
 
-\section{Support Vector Machines (SVM)}
+\section{Support Vector Machine (SVM)}
 
 \section{Linear Discriminant Analysis (LDA)}
 
 \section*{References}
+
+L. van der Maaten et G. Hinton. 2009. Visualizing Data using t-SNE.
 
 \end{document}
