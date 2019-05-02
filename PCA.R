@@ -55,7 +55,7 @@ plot.PCA(resPCA, choix = "ind", habillage = label_col, label = NULL)
 fviz_pca_ind(resPCA, col.ind = train_xy[,label_col], label = "none", addEllipses = TRUE)
 
 # Images reconstruction
-rec <- reconst(resPCA)
+rec <- reconst(resPCA, ncp = 50)
 
 # Select one obs for each class
 index <- c(2, 17, 6, 4, 20, 9, 19, 7, 24, 1)
@@ -64,6 +64,8 @@ rec <- rec[index,]
 normalize <- function(x){
   (x - min(x)) / (max(x) - min(x)) * 255
 }
+
+rec <- read.csv("decoded_images.csv", row.names = 1)
 
 rec <- apply(rec, MARGIN = 1, FUN = normalize)
 
