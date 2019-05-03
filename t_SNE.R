@@ -77,6 +77,10 @@ png(filename="tSNE_time", width = 1000, height = 1000)
 plot(perpl_v, times, type = "b", xlab = "Perplexity", ylab = "Computation time")
 dev.off() 
 
-#kl_res <- c(4.09, 3.73, 3.48, 3.33, 3.18, 3.08, 2.99, 2.91, 2.83, 2.78, 2.73, 2.68, 2.62, 2.56, 2.54, 2.51, 2.47, 2.43, 2.39, 2.36, 2.21, 2.14, 2.03, 1.97, 1.88, 1.83, 1.77, 1.72, 1.67, 1.64)
-#perpl_v <- c(1:20 * 5, 1:10 * 25 + 100)
-#plot(perpl_v, kl_res, type = "b", xlab = "perplexity", ylab = "KL divergence")
+kl_res <- c(4.09, 3.73, 3.48, 3.33, 3.18, 3.08, 2.99, 2.91, 2.83, 2.78, 2.73, 2.68, 2.62, 2.56, 2.54, 2.51, 2.47, 2.43, 2.39, 2.36, 2.21, 2.14, 2.03, 1.97, 1.88, 1.83, 1.77, 1.72, 1.67, 1.64)
+perpl_v <- c(1:20 * 5, 1:10 * 25 + 100)
+plot(perpl_v, kl_res, type = "b", xlab = "Perplexity", ylab = "KL divergence")
+
+kl_res <- c(2.02, 1.85, 1.74, 1.65, 1.59, 1.57, 1.54, 1.53, 1.51)
+learn_v <- c(50, 100, 200, 400, 800, 1600, 3200, 6400, 12800)
+plot(learn_v, kl_res, type = "b", xlab = "Learning rate", ylab = "KL divergence")
