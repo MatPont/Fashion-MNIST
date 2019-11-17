@@ -1,4 +1,5 @@
-setwd("/media/matthieu/Data/Matthieu/##Etude/#M1/S2/DataScience/Fashion-MNIST")
+#setwd("/media/matthieu/Data/Matthieu/##Etude/#M1/S2/DataScience/Fashion-MNIST")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 library("FactoMineR")
 library("corrplot")
